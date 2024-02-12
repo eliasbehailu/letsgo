@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+article {
+    background-color:darkgray;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+section {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    margin: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#row {
+    width: 100%;
+    margin-left: 0; /* Add some left margin */
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .col-1, .col-2, .col-3 {
+        float: left;
+        width: 30%;
+        position: relative;
+        margin: 10px;
+        margin-left: 10px;
+        overflow: auto;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-1, .col-2 {
+        float: left;
+        width: 50%;
+        position: relative;
+        overflow: auto;
+    }
+
+    .col-3 {
+        width: 100%; /* Full width for the 3rd column in tablet view */
+        clear: both; /* Move to the second row */
+        position: relative;
+        margin-top: 20px; /* Adjust margin if needed */
+        overflow: auto;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .col-1, .col-2, .col-3 {
+        float: left;
+        width: 100%;
+        position: relative;
+        margin-left: 0; /* Add left margin for mobile view */
+        overflow: auto;
+    }
+}
